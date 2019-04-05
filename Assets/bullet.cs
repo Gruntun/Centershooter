@@ -11,7 +11,7 @@ public class bullet : MonoBehaviour
 
     void Start()
     {
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * speed * Time.deltaTime;
     }
 
 }
