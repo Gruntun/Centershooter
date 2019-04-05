@@ -44,4 +44,9 @@ public class Attributes : MonoBehaviour
                 
     }
 
+    public void takeDamage(int damage)
+    {
+
+    }
+
 }
