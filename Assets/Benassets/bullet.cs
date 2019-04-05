@@ -9,10 +9,12 @@ public class bullet : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    void Start()
+    void FixedUpdate()
     {
         rb.velocity = transform.right * speed * Time.deltaTime;
     }
+
+  
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
