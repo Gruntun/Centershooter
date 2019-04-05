@@ -30,6 +30,13 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bulletInstance;
+
+       bulletInstance = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+       
+
+                  bulletInstance.GetComponent<bullet>().MainPlayer = transform;
+
     }
 }

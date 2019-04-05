@@ -134,6 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 200
   rb: {fileID: 124323927874754552}
+  MainPlayer: {fileID: 554077938529187624, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
+    type: 3}
 --- !u!96 &124323927874754555
 TrailRenderer:
   serializedVersion: 2

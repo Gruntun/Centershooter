@@ -5,11 +5,11 @@ using UnityEngine;
 public class Attributes : MonoBehaviour
 {
 
-    public float health;
+    
 
     private int selectedWeapon;
 
-    public float energy;
+    
 
     // Start is called before the first frame update
     void Start()
