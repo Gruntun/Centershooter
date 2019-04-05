@@ -38,7 +38,7 @@ public class bullet : MonoBehaviour
         {
             if (hitInfo.tag == "Player")
             {
-                atrri.takeDamage(30);
+                
 
                
             }
