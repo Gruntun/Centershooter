@@ -9,13 +9,27 @@ public class bullet : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    void Start()
+    public GameObject MainPlayer;
+
+    void Update()
     {
         rb.velocity = transform.right * speed * Time.deltaTime;
     }
 
+  
+
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Debug.Log(hitInfo.tag);
+        Attributes atrri = hitInfo.GetComponent<Attributes>();
+        if (hitInfo.gameObject != MainPlayer )
+        {
+            if (hitInfo.tag == "Player")
+            {
+                atrri.takeDamage(30);
+            }
+                
+            Destroy(gameObject);
+        }
+        
     }
 }
