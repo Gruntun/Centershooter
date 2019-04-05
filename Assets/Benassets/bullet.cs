@@ -14,4 +14,8 @@ public class bullet : MonoBehaviour
         rb.velocity = transform.right * speed * Time.deltaTime;
     }
 
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        Debug.Log(hitInfo.tag);
+    }
 }
