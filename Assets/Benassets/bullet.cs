@@ -9,9 +9,9 @@ public class bullet : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public GameObject enemyPlayer;
+    public GameObject MainPlayer;
 
-    void FixedUpdate()
+    void Update()
     {
         rb.velocity = transform.right * speed * Time.deltaTime;
     }
@@ -20,10 +20,16 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
+        Attributes atrri = hitInfo.GetComponent<Attributes>();
+        if (hitInfo.gameObject != MainPlayer )
         {
-            enemyPlayer.TakeDamage(30);
-            
+            if (hitInfo.tag == "Player")
+            {
+                atrri.takeDamage(30);
+            }
+                
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 }
