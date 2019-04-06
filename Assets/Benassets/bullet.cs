@@ -11,6 +11,8 @@ public class bullet : MonoBehaviour
 
     public Transform MainPlayer;
 
+    public int damage;
+
     Transform REALPLAYER;
 
     GameObject THEONETRUEPLAYER;
@@ -33,14 +35,12 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Attributes atrri = hitInfo.GetComponent<Attributes>();
+        PlayerHealth playerHealth = hitInfo.GetComponent<PlayerHealth>();
         if (hitInfo.gameObject != MainPlayer.root.gameObject)
         {
-            if (hitInfo.tag == "Player")
+            if (playerHealth != null)
             {
-                
-
-               
+                playerHealth.takeDamage(damage);
             }
                 
             Destroy(gameObject);

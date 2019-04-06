@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 283209207}
   - component: {fileID: 283209206}
   - component: {fileID: 283209205}
+  - component: {fileID: 283209208}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: Untagged
@@ -389,6 +390,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &283209208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283209202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdad90ecd039ec34a89c50c60e6e2c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +515,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeaponHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 554077940315489406, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
+        type: 3}
+      propertyPath: center
+      value: 
+      objectReference: {fileID: 187563801}
+    - target: {fileID: 554077940315489406, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1000645166616086188, guid: ff6555be688491b9e8d6b9af93e73df7,
+        type: 3}
+    - target: {fileID: 554077940084783649, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
+        type: 3}
+      propertyPath: center
+      value: 
+      objectReference: {fileID: 187563801}
+    - target: {fileID: 554077940084783649, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 6397747668006222145, guid: 9bbf5466c2f55ca5eb52ec01529e482a,
+        type: 3}
     - target: {fileID: 554077938529187627, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -572,28 +608,6 @@ PrefabInstance:
       propertyPath: button
       value: q
       objectReference: {fileID: 0}
-    - target: {fileID: 554077940084783649, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
-        type: 3}
-      propertyPath: center
-      value: 
-      objectReference: {fileID: 187563801}
-    - target: {fileID: 554077940084783649, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
-        type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 6397747668006222145, guid: 9bbf5466c2f55ca5eb52ec01529e482a,
-        type: 3}
-    - target: {fileID: 554077940315489406, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
-        type: 3}
-      propertyPath: center
-      value: 
-      objectReference: {fileID: 187563801}
-    - target: {fileID: 554077940315489406, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
-        type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 1000645166616086188, guid: ff6555be688491b9e8d6b9af93e73df7,
-        type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc, type: 3}
@@ -822,6 +836,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeaponHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 554077940315489406, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1000645166616086188, guid: 63eeba78f433df24e9e8bf9d68e98ba7,
+        type: 3}
+    - target: {fileID: 554077940315489406, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
+        type: 3}
+      propertyPath: center
+      value: 
+      objectReference: {fileID: 187563801}
+    - target: {fileID: 554077940084783649, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
+        type: 3}
+      propertyPath: center
+      value: 
+      objectReference: {fileID: 187563801}
+    - target: {fileID: 554077940084783649, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 6397747668006222145, guid: 9bbf5466c2f55ca5eb52ec01529e482a,
+        type: 3}
     - target: {fileID: 554077938529187627, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -893,28 +929,6 @@ PrefabInstance:
       propertyPath: button
       value: q
       objectReference: {fileID: 0}
-    - target: {fileID: 554077940084783649, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
-        type: 3}
-      propertyPath: center
-      value: 
-      objectReference: {fileID: 187563801}
-    - target: {fileID: 554077940084783649, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
-        type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 6397747668006222145, guid: 9bbf5466c2f55ca5eb52ec01529e482a,
-        type: 3}
-    - target: {fileID: 554077940315489406, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
-        type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 1000645166616086188, guid: 63eeba78f433df24e9e8bf9d68e98ba7,
-        type: 3}
-    - target: {fileID: 554077940315489406, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc,
-        type: 3}
-      propertyPath: center
-      value: 
-      objectReference: {fileID: 187563801}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8548f1f1cdfc3f26aa0bca33a55bfbc, type: 3}
 --- !u!1 &1912525491
@@ -1012,6 +1026,7 @@ GameObject:
   - component: {fileID: 2139268521}
   - component: {fileID: 2139268520}
   - component: {fileID: 2139268519}
+  - component: {fileID: 2139268524}
   m_Layer: 0
   m_Name: PlayerTwo
   m_TagString: Untagged
@@ -1144,6 +1159,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2139268524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139268518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdad90ecd039ec34a89c50c60e6e2c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
 --- !u!4 &2143684684
 Transform:
   m_ObjectHideFlags: 0

@@ -133,3 +133,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 200
   rb: {fileID: 1000645166616086187}
+  MainPlayer: {fileID: 0}
+  damage: 30
