@@ -10,9 +10,9 @@ public class Weapon2 : MonoBehaviour
     public Transform center;
     public float fireRate;
     private float nextTimeToFire = 0f;
-    int ammo;
+   public int ammo;
     public float reloadtime;
-    public int maxammo;
+    int maxammo;
 
 
     private void Start()
@@ -29,7 +29,7 @@ public class Weapon2 : MonoBehaviour
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        if (Input.GetKey(KeyCode.Q) && Time.time >= nextTimeToFire && ammo > 0)
+        if (Input.GetKey(KeyCode.RightShift) && Time.time >= nextTimeToFire && ammo > 0)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();

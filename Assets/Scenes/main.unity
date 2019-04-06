@@ -997,8 +997,8 @@ MonoBehaviour:
     type: 3}
   center: {fileID: 693056161177182868, guid: 963b9f9a09ed3a2469d7eb1255ac05b9, type: 3}
   fireRate: 3
-  reloadtime: 0
-  maxammo: 10
+  ammo: 10
+  reloadtime: 1.5
 --- !u!1001 &1602786759
 PrefabInstance:
   m_ObjectHideFlags: 0
