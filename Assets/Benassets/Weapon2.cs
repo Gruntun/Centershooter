@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class Weapon2 : MonoBehaviour
 {
+    
     public Transform firePoint;
     public GameObject bulletPrefab;
     public Transform center;
     public float fireRate;
     private float nextTimeToFire = 0f;
-    
+    int ammo;
+    public float reloadtime;
+    public int maxammo;
+
+
+    private void Start()
+    {
+        maxammo = ammo;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -19,18 +29,24 @@ public class Weapon2 : MonoBehaviour
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        if (Input.GetKey(KeyCode.RightShift) && Time.time >= nextTimeToFire)
+        if (Input.GetKey(KeyCode.Q) && Time.time >= nextTimeToFire && ammo > 0)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
 
 
+        if (ammo <= 0)
+        {
+            StartCoroutine(Reload());
+        }
+
     }
 
 
     void Shoot()
     {
+        ammo -= 1;
         GameObject bulletInstance;
 
         bulletInstance = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -40,4 +56,13 @@ public class Weapon2 : MonoBehaviour
         bulletInstance.GetComponent<bullet>().MainPlayer = transform;
 
     }
+
+    public IEnumerator Reload()
+    {
+        yield return new WaitForSeconds(reloadtime);
+
+        ammo = maxammo;
+    }
+
+
 }

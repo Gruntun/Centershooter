@@ -6,7 +6,7 @@ public class Attributes : MonoBehaviour
 {
 
 
-    public int ammo;
+    
     public int selectedWeapon;
 
     
@@ -29,16 +29,15 @@ public class Attributes : MonoBehaviour
         foreach (Transform weapon in transform)
         {
             if (i == selectedWeapon)
-            
-
+            {
                 weapon.gameObject.SetActive(true);
-
-            
+                
+            }
             else
-            
+            {
                 weapon.gameObject.SetActive(false);
                 i++;
-            
+            }
             
         }
                 
