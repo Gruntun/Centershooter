@@ -5,9 +5,9 @@ using UnityEngine;
 public class Attributes : MonoBehaviour
 {
 
-    
 
-    private int selectedWeapon;
+    public int ammo;
+    public int selectedWeapon;
 
     
 
