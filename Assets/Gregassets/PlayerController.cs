@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
 
+   
     void Update()
     {
        if (Input.GetKey (KeyCode.A)) {
